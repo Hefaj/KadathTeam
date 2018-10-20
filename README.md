@@ -1,1 +1,4 @@
-Rafał W\nAleksandea W\nJan M\nDominika J
+Rafał W
+Aleksandea W
+Jan M
+Dominika J
