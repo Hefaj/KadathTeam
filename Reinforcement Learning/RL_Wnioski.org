@@ -1,0 +1,57 @@
+* RL
+
+1. Definiowanie problemu RL
+
+   + RL uczy się, co robić i jak reagować na napotkane sytuacje.
+     Końcowym rezultatem jest maksymalizacja liczbowego sygnału nagrody. Uczący się agent
+     nie jest informowany o tym, jakie działania podjąć, ale sam musi odkryć, 
+     które działanie przyniesie nagrodę.
+
+2. Metody rozwiązywania problemów z uczeniem się RL.
+   
+   + Proces decyzyjny Markova:
+     Model matematyczny problemu uczenia przez wzmacnianie (model środowiska)
+     przedstawia się jako proces decyzyjny Markowa (MDP), który projektujemy jako:
+     
+     * Zestaw stanów,   S
+     * Zestaw akcji,    A
+     * Funkcje nagrody, R
+     * Polityka,        π
+     * Wartość,         V
+
+     Musimy podjąć akcje (A), aby przejść z naszego stanu początkowego do stanu końcowego (S).
+     W zamian otrzymujemy nagrody (R) za każdą akcję, którą wykonamy.
+     Nasze działania mogą prowadzić do pozytywnej lub negatywnej nagrody.
+
+     Zestaw podjętych przez nas akcji określa naszą politykę (π), a nagrody, 
+     które otrzymujemy w zamian, określają naszą wartość (V). Naszym zadaniem jest maksymalizacja 
+     naszych korzyści poprzez wybór właściwej polityki. Musimy więc zmaksymalizować
+
+     E(r_t|π,s_t)
+
+     Dla wszystkich stanów S w czasie t.
+
+   + W jaki sposób znajdywać najlepsze akcje:
+     
+     Istnieją różne sposoby rozwiązania tego problemu
+     * Oparte na polityce, naszym celem jest znalezienie optymalnej polityki
+     * Oparte na wartości, skupiamy się na optymalnej wartości, suma nagród
+     * Oparte na akcji,    szukamy optymalnej akcji którą należy podjąć w każdym etapie
+
+3. Q-learning
+   + Q-learning polega na zastosowaniu sieci neuronowej jako 
+    aprokymator (czyli znalezieniu jak najlepszego rozwiązania).
+
+   + Algorytm 
+     1) Inicjalizuj tabelę wartości Q(s,a)
+     2) Obserwuj bieżący stan s.
+     3) Wybierz akcję a dla bieżącego stanu za pomocą jednej z polityk (np. epsilon greedy) 
+     4) Wykonaj akcję i sprawdż nagrodę oraz nowy stan s.
+     5) Zaktualizuj wartość dla stanu wykorzystując nagrodę i możliwą najlepszą nagrodę 
+        dla następnego stanu. Korzystamy z  E(r_t|π,s_t)
+     6) Ustaw stary stan na nowy i powtarzaj proces aż do osiągnięcia stanu końcowego.
+
+     [[https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/12042140/11038f3.jpg][Rysunek przedstawiający pseudo kod.]]
+
+4. Przykładowa implementacja 
+   + Jeszcze nie zrobione. :(
