@@ -54,4 +54,9 @@
      [[https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/12042140/11038f3.jpg][Rysunek przedstawiający pseudo kod.]]
 
 4. Przykładowa implementacja 
-   + Jeszcze nie zrobione. :(
+   + Bedzie za tydzień.
+   
+   
+5. Fajne przykłady 
+  + [[https://github.com/ShangtongZhang/reinforcement-learning-an-introduction][Tutaj!]]
+
