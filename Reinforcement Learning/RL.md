@@ -1,9 +1,0 @@
-
-# Table of Contents
-
-
-
-\begin{equation}
-\[ x^n + y^n = z^n \]
-\end{equation}
-
