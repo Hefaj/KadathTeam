@@ -1,6 +1,6 @@
 Podstawowe wyzwania dla RL:
   * Reprezentacja stanów środowiska.
-	* Generalizacja od szkolenia do innych możliwych stanów środowiska.
+  * Generalizacja od szkolenia do innych możliwych stanów środowiska.
 	* Eksploracja stanów lub akcji, które nie są optymalne.
 	* Szacowanie w ograniczonym czasie celem znalezienia optymalnej polityki
 
