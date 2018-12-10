@@ -41,5 +41,5 @@ Do obliczenia wartości funkcji akcji wymagane są :
  * podjęte działania,
  * oczekiwane nagrody.
  
- Równania Bellmana reprezentuje wartość środowiska pod względem wartości stanów następnych.
+ Równania Bellmana reprezentuje wartość środowiska uwzględniając wartości stanów następnych.
  
