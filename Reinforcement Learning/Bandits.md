@@ -9,14 +9,14 @@ Pojęcie jednoręcznych bandytów jako sposób badania problemu eksploracji i ek
 Bandits 
 stałe ograniczony zestaw zasobów musi być rozdzielona między alternatywne/konkurencyjne wybory w sposób, który maksymalizuje ich oczekiwany zysk, gdy właściwości każdego wyboru są tylko częściowo znane w danym momencie, i mogą stać się lepiej rozumiane wraz z upływem czasu lub poprzez przydzielanie zasobów.
 
-	Epsilon-greedy
-		Chciwie wykorzystujemy czas na eksploatacje a pozostałą cześć czasu eksplorujemy albo wykonujemy losowe akcje.
-	Regret
-		Czekamy aż algorytm zwróci wszystkie optymalne akcje w obecnym stanie.
-	UCB
-		Rozwiązanie Regret z naszą polityką.
-	Thompson Sampling
-		Szacujemy optymalną politykę po przez próbkowanie.
+Epsilon-greedy
+  Chciwie wykorzystujemy czas na eksploatacje a pozostałą cześć czasu eksplorujemy albo wykonujemy losowe akcje.
+Regret
+  Czekamy aż algorytm zwróci wszystkie optymalne akcje w obecnym stanie.
+UCB
+  Rozwiązanie Regret z naszą polityką.
+Thompson Sampling
+  Szacujemy optymalną politykę po przez próbkowanie.
 
 Agent, który podejmuje pewne kroki eksploracyjne wraz z chciwą strategii, zbiegnie się do optymalnej polityki przy jednoczesnym zdobyciu informacji w celu ulepszenia polityki.
 Dlaczego generalizacja jest ważne w RL?
