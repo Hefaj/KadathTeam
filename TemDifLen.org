@@ -1,0 +1,64 @@
+* Temporal Difference Learning
+
+
+
+
+  Epizod - jest to sekwencja stanów, akcji oraz nagród.
+  Funkcja warto¶ci stanu - informuje o warto¶ci stanu S, zgodn± z polityk± pi.
+
+  Wracaj±c do programowania dynamicznego, które pozwala nam rozwi±zaæ problem procesu decyzyjnego Markov za pomoc±
+  wla¶nie programowania dynamicznego, ale pod warunkiem, ¿e znane jest MDP, to znaczy, ¿e musimy posiadaæ model rz±dz±cy tym MDP.
+
+  Na przyk³ad, jak widaæ w równaniu Bellmana, musimy znaæ prawdopodobieñstwo nastêpnego stanu, bior±c pod uwagê obecny stan i dzia³ania, które podejmujemy.
+
+  "Jak oszacowaæ warto¶æ funckji, kiedy nikt nie mówi ci, jak dzia³ ¶rodowisko?"
+
+  Temporal Difference Learning pozwala na rozwi±zanie MDP nie znaj±c prawdopodobieñstwa.
+
+  Uczenie Monte Carlo to prosta metoda, któr± bardzo ³atwo zrozumieæ, lecz nie jest najwydajniejsz± metod±,
+  s± jednak nadal szeroko stosowane i praktykowane.
+
+  G³ówn± ide± jest uczenie siê bezpo¶rednio z epizodów do¶wiadczenia.
+  Tak wiêc nie musimy znaæ ¶rodowiska MDP.
+
+  I dlatego nazywa siê modal free learning.
+
+  Wiêc najprostszy pomys³ jest taki, aby oszacowaæ warto¶æ polityki i zwróciæ warto¶æ empiryczn± (¶redni±).
+
+  Tak wiêc, je¶li warto¶æ po jednym uruchomieniu wynosi piêæ,
+  a warto¶æ kolejnego rzutu wynosi siedem, to po prostu je wyceniamy i szacujemy, funkcja warto¶ci wynosi sze¶æ.
+
+  Jedno zastrze¿enie z MC to to, ¿e mo¿na go u¿ywaæ tylko dla epizodycznych MDP, co oznacza, ¿e wszystkie epizody musz± siê zakoñczyæ.
+
+  Szczegó³y:
+  Cel:
+    uczenie siê polityki ![pi](http://latex.codecogs.com/png.latex?%5Cpi) z epizodów do¶wiadczalnych PI.
+    ![s](http://latex.codecogs.com/gif.latex?S_%7B1%7D%2CA_%7B1%7D%2CR_%7B2%7D%2C...%2CS_%7Bk%7D)
+
+  Oczekiwany zwrot:
+    ca³kowita nagroda
+    ![g](http://latex.codecogs.com/gif.latex?G_%7Bt%7D%3DR_%7Bt&plus;1%7D&plus;%5Cgamma%20R_%7Bt&plus;1%7D&plus;...&plus;%5Cgamma%5E%7BT-1%7DR_%7BT%7D)
+
+  funckja warto¶ci dla danej sumy warto¶ci:
+    ![v](http://latex.codecogs.com/gif.latex?V_%7B%5Cpi%20%7D%28s%29%3DE%5BG_%7Bt%7D%7CS_%7Bt%7D%3Ds%5D)
+
+  Temporal Difference Learning to ulepszony MC.
+
+  Tak jak Monte Carlo, nie mamy wiedzy na temat MDP, jak dynamika przej¶cia lub funkcja nagrody.
+  Jednak w przeciwieñstwie do MC, TD mo¿e uczyæ siê od niekompletnych epizodów przez bootstrapping.
+
+  Zobaczmy wiêc, jak TD dzia³a na przyk³adzie wracanie samochodem do domu.
+
+  Zanim opu¶cimy biuro, szacujemy, ¿e powrót do domu zajmie 30 minut.  Wychodzisz z biura i widziesz, ¿e pada deszcz, wiec musisz wróciæ po parasol,
+  zajmie ci to 5 min wiec teraz mo¿esz pononie oszacowaæ czas, czyli 35 min.
+  Aktualizujesz to z poprzedniego oszacowania 30 minut. Jedziesz i uda³o ci siê
+  pokonaæ ca³± autostradê w 20 min, bo nie by³o korków. Aktualizujesz czas 15 min
+  i jeste¶ w domu. Dojecha³e¶ do domu, musisz wysi±¶æ z auta i wej¶æ do mieszkania
+  to zajmie ci 2 min. I tak dalej.
+
+  Tak wiêc, jak widaæ w tym przyk³adzie, u¿ywaj±c TD mo¿esz aktualizowaæ swoje
+  prognozy po ka¿dym kroku, w przeciwieñstwie do przypadku MC, gdzie musieliby¶my
+  poczekaæ a¿ przejedziemy ca³y odcinek od biurza a¿ do domu, w celu oszacowania,
+  jak d³ugo trwa³a podró¿.
+
+  I to jest wizualizacja ró¿nicy miêdzy aktualizacja MC i TD
