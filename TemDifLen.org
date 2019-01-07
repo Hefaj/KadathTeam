@@ -62,3 +62,33 @@
   jak d³ugo trwa³a podró¿.
 
   I to jest wizualizacja ró¿nicy miêdzy aktualizacja MC i TD
+
+* Zalety i wady
+  TD potrafi uczyæ siê na bierz±co tz. online learning, gdzie MC musi poczekaæ a¿ zostanie wzrócona warot¶æ ca³ego epizodu.
+  Czyli TD uczy siê po ka¿dym kroku. TD dzia³a w ¶rodowiskach ciag³ych, czyli takich które siê nie koñcz±.
+
+  Mamy tutaj doczynienia z odchyleniem i wariancj±.
+  |    | Zalety i  Wady          |
+  |----+-------------------------|
+  | TD | Wysok± wariancje.       |
+  |    | Nie jest zbyt wra¿liwy. |
+  |    | Zero stronnicze.        |
+  |----+-------------------------|
+  | MC | Niska wariancja.        |
+  |    | Jest wra¿liwy na dane.  |
+  |    | Jest stronniczy.        |
+
+  TD jest bardziej wydajne, poniewa¿ ma nisk± wariancje lecz stronniczo¶æ powoduje, ¿e jest bardziej wra¿liwy na warto¶ci pocz±tkowe.
+  Dlatego warto¶ci pocz±tkowe s± bardzo wa¿ne.
+
+  TD zbiega siê znacznie szybciej do warto¶ci rzeczywistej niz MC.
+  
+  Boostrapping  - Aktualizacje wi±¿± siê z oszacowaniem, czyli mamy tak± acholastykê.
+
+* TD i Q-learning
+  Pozwala na naukê z obserwacji ludzi i innych agentów. Mo¿na zmieniaæ zasady polityki oraz metody co daje nam masê danych.
+  Nie mo¿esz ponownie u¿yæ polityki, któr± ju¿ u¿ywa³e¶, ale mo¿esz wykorzystaæ do¶wiadczenie z nich.
+  Metoda ta pozwala na zapoznanie wielu zasad w momencie przestrzegania tylko jednej z nich.
+  W Q-learning musimy kierowaæ siê polityk± Pi. Cel, znalezienie optymalnej polityki Pi stosuj±c chciwe podej¶cie.
+  Przez co mo¿emy mieæ politykê, która ma mechanizm eksploracji oraz polityka docelowa, która koncentruje siê na eksploatacji.
+
