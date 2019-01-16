@@ -1,0 +1,94 @@
+* Wstęp do RL 
+  1. Czym jest RL?
+     Załóżmy, że uczysz psa łapać piłkę, ale nie mówisz mu dokładnie, że ma złapać piłkę.
+     Po prostu rzucasz piłką i za każdym razem jak pies złapie piłkę, dajemy mu ciastko, jeżeli nie złapie, to nie dostanie.
+     Pies po pewnym czasie nauczy się, jaka akcja doprowadzi do dostania ciastka, a jaka nie.
+
+     W środowisku RL nie uczymy agenta co ma robić i jak, tylko dajemy pozytywną, nagrodę gdy uda mu się zrobić to co chcemy.
+     A zatem, jest to proces prób i błędów. Nagroda może być przyznawana co każdy krok, bądź co jakiś etap np. przejście całego poziomu.
+    
+  2. RL algorytm
+     1) Agent wykonuje interakcję ze środowiskiem, za pomocą dostępnych akcji,
+     2) po wykonaniu akcje agent przechodzi z jednego stanu w drugi,
+     3) agent otrzymuje nagrodę za wykonaną akcje,
+     4) na postawie otrzymanej nagrody agent rozumie, czy działanie to było dobre, czy złe,
+     5) jeżeli agent otrzymał pozytywną nagrodę, będzie ją powtarzać, albo będzie próbować innych akcji, które również dają pozytywną nagrodę.
+
+  3. Elementy RL
+     1) Agent 
+	Agenci to inteligentne programy podejmujące decyznę. To ich uczymy w RL.
+	Agent wykonuje akcję przez interakcje ze środowiskiem, otrzymują nagrodę opartą na wykonanej akcji.
+	Przykładem agenta jest Super Mario poruszający się w grze.
+	
+     2) Funkcja polityki (Policy function)
+	Polityka agenta decyduje o tym, jak agent będzie się zachowywał w środowisku, politykę oznaczamy, jako π.
+	Chcąc dotrzeć do biura z domu, możesz wybrać różne ścieżki, jedne będą krótsze inne dłuższe. Te ścieżki nazywany polityką (strategią), 
+	ponieważ reprezentują one różne sposoby do wyonania zadania. My decydujemy którą ścieżkę wybierzemy.
+
+     3) Funkcja wartości (Value function)
+	Wartość ta informuje agenta, jak dużą wartość ma dla niego bycie w szczególnym stanie. Jest to zależne od polityki, którą agent się kieruje.
+	Funkcje wartości oznacza się jako v(s).
+	Jest równa całkowitej oczekiwanej nagrodzie otrzymanej przez agenta, począwszy od stanu początkowego.
+	Może istnieć kilka funkcji wartości. 
+        Optymalną funkcją wartości jest ta która ma najwiekszą wartość dla wszystkich stanów, względem innych funkcji wartości.
+	Analogicznie optymalną polityką jest ta, która posiada najlepszą funkcję wartości.
+	
+     4) Model
+	Model jest reprezentacją agenta w środowisku. Nauka może przebiegać na dwa sposoby:
+	- model-based learning
+	  Agent wykorzystuje wcześniej zdobyte informacje do wykonania zadania.
+	- model-free  learning
+	  Agent opiera się na doświadczeniu pozyskanemu z prób i błędów (trial-and-error experience), celem wykonania następnej akcji.
+
+	Zakładając, że chcesz jak najszybciej dotrzeć do biura z domu,
+	- w model-based korzystamy z wcześniej zdobytego doświadczenia (mapy)
+	- w model-free wypróbujesz wszystkich dostępnych tras i wybierzesz najszybszą.
+
+  4. Środowisko agenta - interfejs
+     Agent wykonuje akcję [A](http://latex.codecogs.com/png.latex?%5Cpi) w czasie t, 
+     przechodząc ze stanu [S_t](http://latex.codecogs.com/png.latex?S_t) do następnego stanu [S_{t+1}](http://latex.codecogs.com/png.latex?S_%7Bt&plus;1%7D).
+     Poprzez akcje, agent otrzymuję od środowiska liczbową nagrodę R. Ostatecznie celem RL jest znalezienie optymalnych akcji, które zwiększą liczbową nagrodę.
+
+     <p align = 'center'>
+     <img src = 'img/interface1.png' height = '246px'>
+     </p>
+
+  5. Środowisko - rodzaje
+     Wszystko z czyn agent wchodzi w interakcje, nazywamy środowiskiem.
+     
+     1) Deterministyczne środowisko (Deterministic environment)
+	Środowisko jest deterministyczne, kiedy znamy wynik na podstawie obecnego stanu.
+	W grze w szachy znamy dokładnie wynik przeniesienia pionka przez dowolnego gracza.
+     
+     2) Stochastyczne środowisko (Stochastic environment)
+	Środowisko jest stochastyczne, kiedy nie jesteśmy w stanie przewidzieć wyniku na podstawie obecnego wyniku.
+	Najwyższy poziom niepewności. Nigdy nie wiemy jaką liczbę wylosuje nam rzut kością.
+
+     3) W pełni obserwowane środowisko (Fully observable environment)
+	Agent może zawsze określić stan systemu, w grze w szachy stan systemu, czyli pozycja wszystkich graczy na szachownicy,
+	jest dostępna przez cały czas, wiec gracz może wykonać optymalny ruch/decyzje.
+
+     4) Częsciowo obserwowane środowisko (Partially observable environment)
+	Agent nie może określić stanu systemu w każdym momencie, w pokerze, 
+        nie wiemy nic o kartach naszych rywali.
+
+     5) Dyskretne środowisko (Discrete environment)
+	Agent posiada skończoną ilość akcji, aby przejść z jednego stanu do drugiego.
+	W szachach mamy ograniczoną ilość możliwych posunięć. 
+
+     6) Ciągłe środowisko (Continous environment)
+	When there is an infinite state of actions available for moving from one state to another, 
+        it is called a continuous environment.
+	Mamy wiele tras dostępnych do podróży ze źródła do miejsca docelowego.
+
+     7) Epizodyczne i nieepizodyczne środowisko (Episodic and non-episodic environmrnt)
+	W epizodycznym środowisku bieżące działania agenta nie wpływają na przyszłe,
+	a w  nieepizodycznym środowisku bieżące akcje wpływają na przyszłe. 
+	Nieepizodtczne środowisko jest nazywane również środowiskiem sekwencyjnym.
+	Epizodyczne - niezależne zadania
+	Nieepizodyczne - powiązane zadania
+
+     8) Pojedyncze i wielo-agentowe środowisko (Single and multi-agent environment)
+	W pojedynczym mamy jednego agenta, a w wielo-agentowym wielu.
+	Środowiska z wieloma agentami są szeroko wykorzystywane podczas złożonych zadań.
+     
