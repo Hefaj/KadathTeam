@@ -57,38 +57,39 @@
      - Wszystko z czyn agent wchodzi w interakcje, nazywamy środowiskiem.
      
        1) Deterministyczne środowisko (Deterministic environment)
-	  Środowisko jest deterministyczne, kiedy znamy wynik na podstawie obecnego stanu.
-	  W grze w szachy znamy dokładnie wynik przeniesienia pionka przez dowolnego gracza.
+	  * Środowisko jest deterministyczne, kiedy znamy wynik na podstawie obecnego stanu.
+	    W grze w szachy znamy dokładnie wynik przeniesienia pionka przez dowolnego gracza.
      
        2) Stochastyczne środowisko (Stochastic environment)
-	  Środowisko jest stochastyczne, kiedy nie jesteśmy w stanie przewidzieć wyniku na podstawie obecnego wyniku.
-	  Najwyższy poziom niepewności. Nigdy nie wiemy jaką liczbę wylosuje nam rzut kością.
+	  * Środowisko jest stochastyczne, kiedy nie jesteśmy w stanie przewidzieć wyniku na podstawie obecnego wyniku.
+	    Najwyższy poziom niepewności. Nigdy nie wiemy jaką liczbę wylosuje nam rzut kością.
 
        3) W pełni obserwowane środowisko (Fully observable environment)
-	  Agent może zawsze określić stan systemu, w grze w szachy stan systemu, czyli pozycja wszystkich graczy na szachownicy,
-	  jest dostępna przez cały czas, wiec gracz może wykonać optymalny ruch/decyzje.
+	  * Agent może zawsze określić stan systemu, w grze w szachy stan systemu, czyli pozycja wszystkich graczy na szachownicy,
+	    jest dostępna przez cały czas, wiec gracz może wykonać optymalny ruch/decyzje.
 
        4) Częsciowo obserwowane środowisko (Partially observable environment)
-	  Agent nie może określić stanu systemu w każdym momencie, w pokerze, 
-	  nie wiemy nic o kartach naszych rywali.
+	  * Agent nie może określić stanu systemu w każdym momencie, w pokerze, 
+	    nie wiemy nic o kartach naszych rywali.
 
        5) Dyskretne środowisko (Discrete environment)
-	  Agent posiada skończoną ilość akcji, aby przejść z jednego stanu do drugiego.
-	  W szachach mamy ograniczoną ilość możliwych posunięć. 
+	  * Agent posiada skończoną ilość akcji, aby przejść z jednego stanu do drugiego.
+	    W szachach mamy ograniczoną ilość możliwych posunięć. 
 
        6) Ciągłe środowisko (Continous environment)
-	  When there is an infinite state of actions available for moving from one state to another, 
-	  it is called a continuous environment.
-	  Mamy wiele tras dostępnych do podróży ze źródła do miejsca docelowego.
+	  * When there is an infinite state of actions available for moving from one state to another, 
+	    it is called a continuous environment.
+	    Mamy wiele tras dostępnych do podróży ze źródła do miejsca docelowego.
 
        7) Epizodyczne i nieepizodyczne środowisko (Episodic and non-episodic environmrnt)
-	  W epizodycznym środowisku bieżące działania agenta nie wpływają na przyszłe,
-	  a w  nieepizodycznym środowisku bieżące akcje wpływają na przyszłe. 
-	  Nieepizodtczne środowisko jest nazywane również środowiskiem sekwencyjnym.
-	  Epizodyczne - niezależne zadania
-	  Nieepizodyczne - powiązane zadania
+	  * W epizodycznym środowisku bieżące działania agenta nie wpływają na przyszłe,
+	    a w  nieepizodycznym środowisku bieżące akcje wpływają na przyszłe. 
+	    Nieepizodtczne środowisko jest nazywane również środowiskiem sekwencyjnym.
+	    
+            Epizodyczne - niezależne zadania
+	    Nieepizodyczne - powiązane zadania
 
        8) Pojedyncze i wielo-agentowe środowisko (Single and multi-agent environment)
-	  W pojedynczym mamy jednego agenta, a w wielo-agentowym wielu.
-	  Środowiska z wieloma agentami są szeroko wykorzystywane podczas złożonych zadań.
+	  * W pojedynczym mamy jednego agenta, a w wielo-agentowym wielu.
+	    Środowiska z wieloma agentami są szeroko wykorzystywane podczas złożonych zadań.
      
