@@ -1,10 +1,10 @@
 
 # Table of Contents
 
-1.  [Wstęp do RL](#orgbf5f6e2)
+1.  [Wstęp do RL](#org36cf86e)
 
 
-<a id="orgbf5f6e2"></a>
+<a id="org36cf86e"></a>
 
 # Wstęp do RL
 
@@ -25,21 +25,21 @@
 
 3.  Elementy RL
     1.  Agent 
-        -   Agenci to inteligentne programy podejmujące decyznę. To ich uczymy w RL.
+        -   Agenci to inteligentne programy podejmujące decyzję. To ich uczymy w RL.
             Agent wykonuje akcję przez interakcje ze środowiskiem, otrzymują nagrodę opartą na wykonanej akcji.
             Przykładem agenta jest Super Mario poruszający się w grze.
     
     2.  Funkcja polityki (Policy function)
         -   Polityka agenta decyduje o tym, jak agent będzie się zachowywał w środowisku, politykę oznaczamy, jako π.
             Chcąc dotrzeć do biura z domu, możesz wybrać różne ścieżki, jedne będą krótsze inne dłuższe. Te ścieżki nazywany polityką (strategią), 
-            ponieważ reprezentują one różne sposoby do wyonania zadania. My decydujemy którą ścieżkę wybierzemy.
+            ponieważ reprezentują one różne sposoby do wykonania zadania. My decydujemy którą ścieżkę wybierzemy.
     
     3.  Funkcja wartości (Value function)
         -   Wartość ta informuje agenta, jak dużą wartość ma dla niego bycie w szczególnym stanie. Jest to zależne od polityki, którą agent się kieruje.
             Funkcje wartości oznacza się jako v(s).
             Jest równa całkowitej oczekiwanej nagrodzie otrzymanej przez agenta, począwszy od stanu początkowego.
             Może istnieć kilka funkcji wartości. 
-            Optymalną funkcją wartości jest ta która ma najwiekszą wartość dla wszystkich stanów, względem innych funkcji wartości.
+            Optymalną funkcją wartości jest ta która ma największą wartość dla wszystkich stanów, względem innych funkcji wartości.
             Analogicznie optymalną polityką jest ta, która posiada najlepszą funkcję wartości.
     
     4.  Model
@@ -93,7 +93,7 @@
     -   Epizodyczne i nieepizodyczne środowisko (Episodic and non-episodic environmrnt)
         -   W epizodycznym środowisku bieżące działania agenta nie wpływają na przyszłe,
             a w  nieepizodycznym środowisku bieżące akcje wpływają na przyszłe. 
-            Nieepizodtczne środowisko jest nazywane również środowiskiem sekwencyjnym.
+            Nieepizodyczne środowisko jest nazywane również środowiskiem sekwencyjnym.
             
             Epizodyczne - niezależne zadania
             Nieepizodyczne - powiązane zadania
@@ -136,15 +136,15 @@
             RL zbierając dane od studentów, i jest w stanie wybrać takie materiały, które pozwolą na przygotowanie treści specjalnie pod danego studenta.
     
     -   Medycyna i opieka zdrowotna
-        -   RL personalizuje leczenie pod pacjęta, diagnozuje po obrazach medycznych, tworzy strategię leczenia, wspiera decyzje lekarza, and so on.
+        -   RL personalizuje leczenie pod pacjenta, diagnozuje po obrazach medycznych, tworzy strategię leczenia, wspiera decyzje lekarza, and so on.
     
-    -   Pordukcja (Manufacturing)
+    -   Produkcja (Manufacturing)
         -   Inteligentne roboty są używane, do rozmieszczania obiektów w odpowiednie miejsca. Jeżeli uda mu się bądź nie, zapamiętują to i próbują poprawić skuteczność.
             Zastosowanie inteligentnych robotów zredukuje koszt pracy i zapewni lepszą wydajność. (Złe roboty, prace chcą nam zabrać!)
     
     -   Zarządzanie zasobami
         -   Zarządzanie dostawami, prognozowanie popytu, efektywne zarządzanie przestrzenią. 
-            Badacze z Google DeepMind opracowali algorytm RL, do zmiejszenia zużycia egergii w ich serverowniach.
+            Badacze z Google DeepMind opracowali algorytm RL, do zmniejszenia zużycia energii w ich serwerowniach.
     
     -   Finanse
         -   Zarządzanie finansami, redystrybucja funduszy od różnych produktów, prognozowanie rynku. JP Morgan użył RL do realizacji dużych zamówień.
