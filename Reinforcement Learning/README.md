@@ -1,10 +1,10 @@
 
 # Table of Contents
 
-1.  [Wstęp do RL](#org4d85435)
+1.  [Wstęp do RL](#orgbf5f6e2)
 
 
-<a id="org4d85435"></a>
+<a id="orgbf5f6e2"></a>
 
 # Wstęp do RL
 
@@ -104,40 +104,53 @@
 
 6.  RL - platformy
     1.  OpenAI Gym i Universe
-        
-        -   OpenAI Gym jest narzędziem do budowania, szacowania, porównywania różnych algorytmów RL.
-        
-        Są kompatybilne z algorytmami napisanymi w TemsorFlow, Theano, Keras. Zapewnia interfejs dla wszystkich zadań RL.
-        
-        -   OpenAI Universe jest rozszerzeniem do OpenAI Gym. Pozwala na trenowanie i ocenianie agenta w prosty sposób, w złożonym środowisku czasu rzeczywistego.
-        
-        Pozwala on na <b>przekształcenie dowolnego programu w środowisko Gym</b> bez dostępu do wewnętrznych elementów programu, kodu źródłowego czy API, 
-        dzieje się tak, ponieważ Universe uruchamia program w wirtualnej maszynie.
+        -   OpenAI Gym jest narzędziem do budowania, szacowania, porównywania różnych algorytmów RL.	  
+            Są kompatybilne z algorytmami napisanymi w TemsorFlow, Theano, Keras. Zapewnia interfejs dla wszystkich zadań RL.
+            
+            OpenAI Universe jest rozszerzeniem do OpenAI Gym. Pozwala na trenowanie i ocenianie agenta w prosty sposób, w złożonym środowisku czasu rzeczywistego.
+            Pozwala on na <b>przekształcenie dowolnego programu w środowisko Gym</b> bez dostępu do wewnętrznych elementów programu, kodu źródłowego czy API, 
+            dzieje się tak, ponieważ Universe uruchamia program w wirtualnej maszynie.
     
     2.  DeepMind Lab
-        
         -   Platforma dla AI agent-based. Zawiera bogate symulowane środowisko pozwalające na uruchomienie kilku RL algorytmów. Jest wysoce modyfikowalne oraz rozszerzalne.
-        
-        Wizualizacje są bardzo wzbogacone, sience fiction-style, i realistyczne.
+            Wizualizacje są bardzo wzbogacone, sience fiction-style, i realistyczne.
     
     3.  RL-Glue
-        
-        -   Platforma ta pozwana na połączenie agentów, środowisk i programów, nawet jeżeli są napisane w różnych językach programowania.
-        
-        Daje to możliwość dzielenia się z innymi twoimi agentami i środowiskiem.
+        -   Platforma ta pozwana na połączenie agentów, środowisk i programów, nawet jeżeli są napisane w różnych językach programowania. 
+            Daje to możliwość dzielenia się z innymi twoimi agentami i środowiskiem.
     
     4.  Project Malmo
-        
         -   Kolejna platforma służąca do eksperymentowania z AI, od Microsoft-u, która jest zbudowana na bazie Minecrafta. Zapewnia dobrą elastyczność w dostosowywaniu środowiska.
-        
-        Jest zintegrowany z wyszukanymi środowiskami, pozwana na overclockig, do daje programistą możliwość na szybkie odgrywanie scenariuszy. 
-        Malmo aktualnie pozwala na tworzenie tylko Minecraft-owych środowisk, nie jak OpenAI Universe.
+            Jest zintegrowany z wyszukanymi środowiskami, pozwana na overclockig, do daje programistą możliwość na szybkie odgrywanie scenariuszy. 
+            Malmo aktualnie pozwala na tworzenie tylko Minecraft-owych środowisk, nie jak OpenAI Universe.
     
     5.  ViZDoom
-        
         -   Jak sama nazwa wskazuje, jest to doom-based AI platforma. Zapewnia wsparcie dla wieloagentowego i konkurencyjnego (agenci walczą między sobą) środowiska do testowania agenta.
-        
-        Jednakże VizDoom wspiera tylko środowisko w grze Doom. Zapewnia renderowanie off-screen i wsparcie single, multiplayer.
+            Jednakże VizDoom wspiera tylko środowisko w grze Doom. Zapewnia renderowanie off-screen i wsparcie single, multiplayer.
 
 7.  RL - zastosowanie
+    -   Dzięki większym postępom i badaniom, RL szybko ewoluowały i są aktualnie stosowane w wielu miejscach, od gier komputerowych po automatyzację samochodu.
+    
+    -   Nauka
+        -   Wiele platform e-learningowych używa RL do personalizowania treści pod każdego studenta. Niektórzy studenci lepiej się uczą z video inni, tworząc projekty itp.
+            RL zbierając dane od studentów, i jest w stanie wybrać takie materiały, które pozwolą na przygotowanie treści specjalnie pod danego studenta.
+    
+    -   Medycyna i opieka zdrowotna
+        -   RL personalizuje leczenie pod pacjęta, diagnozuje po obrazach medycznych, tworzy strategię leczenia, wspiera decyzje lekarza, and so on.
+    
+    -   Pordukcja (Manufacturing)
+        -   Inteligentne roboty są używane, do rozmieszczania obiektów w odpowiednie miejsca. Jeżeli uda mu się bądź nie, zapamiętują to i próbują poprawić skuteczność.
+            Zastosowanie inteligentnych robotów zredukuje koszt pracy i zapewni lepszą wydajność. (Złe roboty, prace chcą nam zabrać!)
+    
+    -   Zarządzanie zasobami
+        -   Zarządzanie dostawami, prognozowanie popytu, efektywne zarządzanie przestrzenią. 
+            Badacze z Google DeepMind opracowali algorytm RL, do zmiejszenia zużycia egergii w ich serverowniach.
+    
+    -   Finanse
+        -   Zarządzanie finansami, redystrybucja funduszy od różnych produktów, prognozowanie rynku. JP Morgan użył RL do realizacji dużych zamówień.
+    
+    -   Przetwarzanie języka naturalnego i Rozpoznawanie obrazów
+        -   Przy ujednoliceniu mocy głębokiego uczenia (deep learning) i RL dostajemy Głębokie RL (Deep Reinforcement Learning (DRL)), co daje możliwość 
+            popisu w kwestiach przetwarzania języka naturalnego (Natural Language Processing (NLP)) i rozpoznawania obrazu (Computer Vision (CV)).
+            DRL jest stosowany do streszczania tekstu, ekstrakcji informacji, tłumaczeniu maszynowym oraz rozpoznawaniu obrazu, zapewniają większą dokładność niż obecne systemy.
 
